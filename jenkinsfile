@@ -26,6 +26,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'make publish'
+                build 'TestJob_1'
             }
         }
     }
