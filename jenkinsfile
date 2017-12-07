@@ -1,11 +1,6 @@
 #!/usr/bin/env groovy
-properties(
-[
-[
-$class: 'GithubProjectProperty',
-displayName: '',
-projectUrlStr: 'https://github.com/Demo-project-saikadiyala1994/Practice_Repo_2.git'],
-pipelineTriggers([upstream('Practice_Repo_2/master')]) ])
+properties([[$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/Demo-project-saikadiyala1994/Practice_Repo_3/'], pipelineTriggers([upstream('Job_Organization/Practice_Repo_2/master')])])
+
 pipeline {
     agent any 
 
