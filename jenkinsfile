@@ -1,0 +1,32 @@
+#!/usr/bin/env groovy
+properties(
+[
+[
+$class: 'GithubProjectProperty',
+displayName: '',
+projectUrlStr: 'https://github.com/Demo-project-saikadiyala1994/Practice_Repo_1.git/'],
+pipelineTriggers([githubPush()])
+]
+)
+pipeline {
+    agent any 
+
+    stages {
+        stage('Build') { 
+            steps { 
+                echo 'make' 
+            }
+        }
+        stage('Test'){
+            steps {
+                echo 'make check'
+                
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'make publish'
+            }
+        }
+    }
+}
