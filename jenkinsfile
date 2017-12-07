@@ -4,10 +4,8 @@ properties(
 [
 $class: 'GithubProjectProperty',
 displayName: '',
-projectUrlStr: 'https://github.com/Demo-project-saikadiyala1994/Practice_Repo_1.git/'],
-pipelineTriggers([upstream('TestProject_2')])
-]
-)
+projectUrlStr: 'https://github.com/Demo-project-saikadiyala1994/Practice_Repo_3.git'],
+pipelineTriggers([upstream('master')])])
 pipeline {
     agent any 
 
