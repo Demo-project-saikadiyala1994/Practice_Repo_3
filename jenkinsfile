@@ -6,13 +6,13 @@ $class: 'GithubProjectProperty',
 displayName: '',
 projectUrlStr: 'https://github.com/Demo-project-saikadiyala1994/Practice_Repo_1.git/'],
 pipelineTriggers([githubPush()])
-    triggers { upstream(upstreamProjects: 'TestProject_2', threshold: hudson.model.Result.SUCCESS) }
-]
 ]
 )
 pipeline {
     agent any 
-
+    triggers { 
+        upstream(upstreamProjects: 'TestProject_2', threshold: hudson.model.Result.SUCCESS)
+    }
     stages {
         stage('Build') { 
             steps { 
