@@ -1,4 +1,4 @@
-#!/usr/bin/env groovy
+..#!/usr/bin/env groovy
 properties(
 [
 [
@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                echo 'make' 
+                echo 'make..' 
             }
         }
         stage('Test'){
