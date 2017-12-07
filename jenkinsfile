@@ -10,9 +10,7 @@ pipelineTriggers([upstream('TestProject_2')])
 )
 pipeline {
     agent any 
-    #triggers { 
-    #   upstream(upstreamProjects: 'TestProject_2', threshold: hudson.model.Result.SUCCESS)
-    #}
+
     stages {
         stage('Build') { 
             steps { 
